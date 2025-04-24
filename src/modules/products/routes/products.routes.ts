@@ -3,9 +3,7 @@ import ProductsController from "../controllers/ProductsController";
 
 const productsRouter = Router();
 const productsController = new ProductsController();
-console.log("products.routes antes do metodo")
 productsRouter.get("/", async (req, res, next) => {
-    console.log("productsRouter antes do try")
     try{
         await productsController.index(req,res,next);
     }
