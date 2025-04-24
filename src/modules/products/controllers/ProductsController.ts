@@ -11,6 +11,7 @@ export default class ProductsController {
 		response: Response,
 		next: NextFunction
 	): Promise<Response | void> {
+		console.log("Products controller antes do try")
 		try {
 			const listProducts = new ListProductService();
 			const products = await listProducts.execute();

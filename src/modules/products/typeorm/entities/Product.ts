@@ -19,5 +19,5 @@ export default class Product {
 	@CreateDateColumn()
 	created_at: Date;
 	@UpdateDateColumn()
-	updated_at: Date;
+	update_at: Date;
 }
