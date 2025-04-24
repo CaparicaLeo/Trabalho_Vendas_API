@@ -18,6 +18,7 @@ export default class Product {
 	quantity: number;
 	@CreateDateColumn()
 	created_at: Date;
+	//Aqui estava o erro anterior
 	@UpdateDateColumn()
 	update_at: Date;
 }
