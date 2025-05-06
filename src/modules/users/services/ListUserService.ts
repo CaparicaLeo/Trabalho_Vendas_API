@@ -2,12 +2,11 @@ import { getCustomRepository } from "typeorm";
 import User from "../typeorm/entities/User";
 import UsersRepository from "../typeorm/repositories/UsersRepository";
 
-export default class ListUserService{
-    public async execute():Promise<User[]>{
-        const userRepository = getCustomRepository(UsersRepository);
-        const users = userRepository.find();
+export default class ListUserService {
+	public async execute(): Promise<User[]> {
+		const userRepository = getCustomRepository(UsersRepository);
+		const users = userRepository.find();
 
-        return users;
-    }
-
+		return users;
+	}
 }
