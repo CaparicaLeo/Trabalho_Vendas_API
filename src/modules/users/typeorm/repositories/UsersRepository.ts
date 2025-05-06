@@ -13,8 +13,8 @@ export default class ProductRepository extends Repository<User> {
 		return user;
 	}
 
-    public async findByEmail(email: string): Promise<User | undefined> {
-        const user = this.findOne({ where: { email } });
-        return user;
-    }
+	public async findByEmail(email: string): Promise<User | undefined> {
+		const user = this.findOne({ where: { email } });
+		return user;
+	}
 }

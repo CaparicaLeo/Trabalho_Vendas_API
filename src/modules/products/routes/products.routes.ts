@@ -30,8 +30,8 @@ productsRouter.post(
 	celebrate({
 		[Segments.BODY]: {
 			name: Joi.string().required(),
-			price: Joi.number().precision(2).required(),
-			quantity: Joi.number().required(),
+			price: Joi.number().precision(2).min(0).required(),
+			quantity: Joi.number().min(0).required(),
 		},
 	}),
 	async (req, res, next) => {
@@ -49,8 +49,8 @@ productsRouter.put(
 		[Segments.PARAMS]: { id: Joi.string().uuid().required() },
 		[Segments.BODY]: {
 			name: Joi.string().required(),
-			price: Joi.number().precision(2).required(),
-			quantity: Joi.number().required(),
+			price: Joi.number().precision(2).min(0).required(),
+			quantity: Joi.number().min(0).required(),
 		},
 	}),
 	async (req, res, next) => {
