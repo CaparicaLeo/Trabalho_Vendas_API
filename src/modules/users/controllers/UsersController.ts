@@ -10,6 +10,7 @@ export default class UsersController {
 	): Promise<Response | void> {
 		try {
 			const listUser = new ListUserService();
+			console.log(request.user);
 			const users = await listUser.execute();
 			return response.json(users);
 		} catch (err) {
